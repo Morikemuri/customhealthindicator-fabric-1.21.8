@@ -1,0 +1,40 @@
+plugins {
+    id 'fabric-loom' version '1.15.+'
+    id 'java'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+}
+
+version = '1.5'
+group = 'hw.zako.zakohealthindicator'
+base.archivesName = 'customhealthindicator'
+
+repositories {
+    maven { url = 'https://maven.fabricmc.net/' }
+    mavenCentral()
+}
+
+dependencies {
+    minecraft 'com.mojang:minecraft:1.21.8'
+    mappings 'net.fabricmc:yarn:1.21.8+build.1:v2'
+    modImplementation 'net.fabricmc:fabric-loader:0.16.+'
+}
+
+remapJar {
+    archiveFileName = "customhealthindicator-${version}-fabric-1.21.8.jar"
+}
+
+processResources {
+    inputs.property 'version', project.version
+    filesMatching('fabric.mod.json') {
+        expand 'version': project.version
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    it.options.encoding = 'UTF-8'
+    it.options.release = 21
+}

@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "customhealthindicator",
+  "version": "${version}",
+  "name": "CustomHealthIndicator",
+  "description": "Health indicator HUD with colored nametags. Originally created by Matvey Slotvinskiy. Ported to Fabric 1.21.8 and improved by Gabrielsim.",
+  "authors": ["Matvey Slotvinskiy"],
+  "contributors": ["Gabrielsim (Fabric 1.16.5 & 1.21.8 port, improvements)"],
+  "license": "All rights reserved",
+  "environment": "client",
+  "entrypoints": {
+    "client": ["hw.zako.zakohealthindicator.CustomHealthIndicatorMod"]
+  },
+  "mixins": ["customhealthindicator.mixins.json"],
+  "depends": {
+    "fabricloader": ">=0.15.0",
+    "minecraft": "~1.21.8",
+    "java": ">=21"
+  }
+}

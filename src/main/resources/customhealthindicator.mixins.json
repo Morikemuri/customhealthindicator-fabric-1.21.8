@@ -1,0 +1,17 @@
+{
+  "required": true,
+  "package": "hw.zako.zakohealthindicator.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "refmap": "customhealthindicator-refmap.json",
+  "client": [
+    "MixinEntityRenderer",
+    "MixinPlayerEntityRenderer",
+    "MixinInGameHud",
+    "MixinClientPlayerInteractionManager",
+    "MixinMinecraftClient",
+    "MixinGameOptions"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
