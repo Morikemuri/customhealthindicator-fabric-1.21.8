@@ -1,4 +1,4 @@
-# CustomHealthIndicator — Fabric 1.21.8
+# CustomHealthIndicator - Fabric 1.21.8
 
 Fabric port of CustomHealthIndicator for Minecraft 1.21.8.
 
